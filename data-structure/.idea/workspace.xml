@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a3acb5-5895-4ea9-b6c3-8c70e50ab68d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data-structure.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReturnDistinctArrayElements_HashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SubArrayEqualToZero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdvDSA_ContinuousSumQueryBegger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArrayModOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MaxAbsoluteDifference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubSeqSubSet_SumOfSubArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubSeq_SumOfSubArrayWithOr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SubSequence_LittlePony.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreePracticeWithoutRecursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubArrayEqualToZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubArrayEqualToZero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +36,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="TreePracticeWithoutRecursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TreePracticeWithoutRecursion" />
+      <module name="data-structure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TreePracticeWithoutRecursion" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,5 +78,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TreePracticeWithoutRecursion.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
