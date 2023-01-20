@@ -19,6 +19,42 @@ Third devotee donated 25 coins to beggars ranging from 2 to 5. Final amount in e
 
  */
 public class AdvDSA_ContinuousSumQueryBegger {
+    public static int[] solveOnq(int A, int[][] B) {
+        /* TC: Q*N
+
+         */
+        int[] res = new int[A];
+        int i = 0, j= 0, val = 0;
+        for(int n=0; n<B.length; n++) {
+            System.out.println(" " + B[i][0] + " " + B[i][1] + " " + B[i][2]);
+            i = B[n][0];
+            j = B[n][1];
+            val = B[n][2];
+            res[i-1] += val;
+            if (j<A) {
+                res[j] -= val;
+            }
+
+        }
+        System.out.println();
+
+        for (int N=0; N<A; N++) {
+            System.out.print(":"+res[N]);
+        }
+        System.out.println();
+        for (int N=1; N<A; N++) {
+            res[N] += res[N-1];
+        }
+        for (int N=0; N<A; N++) {
+            System.out.print(":"+res[N]);
+        }
+        System.out.println();
+        return res;
+    }
+
+    /* TC: O(n^2)
+        SC: O(n)
+     */
     public static int[] solve(int A, int[][] B) {
         int[] res = new int[A];
         for(int i=0; i<B.length; i++){
@@ -33,6 +69,7 @@ public class AdvDSA_ContinuousSumQueryBegger {
 
     public static void main(String[] args) {
         int [][]B= {{1, 2, 10}, {2, 3, 20}, {2, 5, 25}};
-        System.out.println(solve(5 , B));
+        //System.out.println(solve(5 , B));
+        System.out.println(solveOnq(5, B));
     }
 }
