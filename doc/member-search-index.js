@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"day34_advDSA_modularArithmatic","l":"day34_advDSA_modularArithmatic()","u":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"day34_advDSA_modularArithmatic","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
+memberSearchIndex = [{"p":"<Unnamed>","c":"SubArrayEqualToZero","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"SubArrayEqualToZero","l":"SubArrayEqualToZero()","u":"%3Cinit%3E()"}];updateSearchResults();

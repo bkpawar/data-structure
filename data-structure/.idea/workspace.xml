@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="53a3acb5-5895-4ea9-b6c3-8c70e50ab68d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day33_advDSA_bitManipulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day34_advDSA_modularArithmatic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structure/SubArrayEqualToZero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structure/SubArrayEqualToZero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structure/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structure/TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structure/TreePracticeWithoutRecursion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structure/TreePracticeWithoutRecursion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvDSA_ContinuousSumQueryBegger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvDSA_ContinuousSumQueryBegger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/data-structure/AdvDSA_ContinuousSumQueryBegger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/data-structure/AdvDSA_ContinuousSumQueryBegger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day33_advDSA_bitManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day33_advDSA_bitManipulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/day34_advDSA_modularArithmatic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/day34_advDSA_modularArithmatic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/type-search-index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
