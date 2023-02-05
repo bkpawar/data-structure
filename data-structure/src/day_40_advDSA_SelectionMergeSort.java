@@ -87,26 +87,54 @@ public class day_40_advDSA_SelectionMergeSort {
         // assumption, I/P -> B[N], C[M] --> A[N+M]
         int i = st; //B
         int j = mid; //C
-        int N = end;
-        int A[] = new int [N];
+        int N = mid+end;
+        int temp = 0;
         for (int k = 0; k< (N); k++) {
             if (i == mid) { //end of the array B
-                A[k] = B[j++]; // take from C
             } else if (j == N){ // end of the array C
-                A[k] = B[i++]; // take from B
             } else if (B[i]<B[j]){
-                A[k] = B[i++]; // take smaller number
+                //temp = B[i]; // take smaller number
             } else {
-                A[k]  = B[j++];
+                //A[k]  = B[j++];
             }
         }
-        return A;
+        return B;
+    }
+
+    /**
+     * Return the Bth smallest element in given array.
+     * @param A
+     * @param B
+     * @return
+     */
+    public static int kthsmallest(final int[] A, int B) {
+        // first do the selection sort
+        // pick
+        int res = 0;
+        int N = A.length;
+        for (int i = 0; i < N; i++){
+            for (int j = 0; j<N-1; j++) {
+                if (A[j] < A[j + 1]) { // sort the array using selection sort method
+                    int temp = A[j+1];
+                    A[j+1] = A[j];
+                    A[j] = temp;
+                }
+            }
+            if (i == B){ // reduce the time complexity to O(B*N)
+                break;
+            }
+        }
+        res = A[A.length-B];
+        //System.out.println(+res);
+        return res;
     }
     public static void main(String[] args) {
         int[] A = {3, 9, 15, 19};
         int[] B = {2, 4, 10};
         //int[] C = SortEvenAndOddSortedArray(A, B);
         int[] D = { 3, 2, 9, 4};
-        SortArray(D, 0, D.length);
+        //SortArray(D, 0, D.length);
+        int [] E = { 8, 16, 80, 55, 32, 8, 38, 40, 65, 18, 15, 45, 50, 38, 54, 52, 23, 74, 81, 42, 28, 16, 66, 35, 91, 36, 44, 9, 85, 58, 59, 49, 75, 20, 87, 60, 17, 11, 39, 62, 20, 17, 46, 26, 81, 92 };
+        kthsmallest(E, 9);
     }
 }

@@ -203,6 +203,33 @@ public class day33_advDSA_bitManipulation {
         }
         return cnt;
     }
+
+    /**
+     * Q: Smallest XOR
+     * A = 7  --> 111
+     * B = 3
+     * 1. match 1s in A from left to right
+     * 2. match os in A from right to left
+     * @param args
+     */
+    public static int minXOR(int A, int B){
+        int mask = 0;
+        for (int shift = 31; shift >= 0 && B>0; shift--){
+            if ((A & (1<<shift)) != 0) {
+                mask |=(1 << shift);
+                B--;
+            }
+        } // if B runs out 2nd loop doesn't run
+        System.out.println("mask:"+mask+",B:"+B);
+        for (int shift = 0; shift <= 31 && B > 0; shift++ ){
+            if ((A & (1 << shift)) == 0){
+                mask |= (1 << shift);
+                B--;
+            }
+        }
+        System.out.println("mask:"+mask);
+        return mask^A;
+    }
     public static void main(String[] args) {
         /* int []A = {53, 39, 88};
         System.out.println("ans: "+getMaxofAndOperation(A));*/
@@ -210,6 +237,7 @@ public class day33_advDSA_bitManipulation {
         System.out.println(singleNumber(B));*/
         /*int []c=  {1, 2, 4, 3, 3, 2, 2, 3, 1, 1};
         System.out.println(singleNumberFromThriceFreq(c));*/
-        System.out.println(numSetBits(0x0f));
+        //System.out.println(numSetBits(0x0f));
+        System.out.println(minXOR(7, 5));
     }
 }
