@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * @author Bhupendra Pawar
  * Topic: Selection Sort,
@@ -62,43 +64,41 @@ public class day_40_advDSA_SelectionMergeSort {
      * @param args
      * Note; Not completed solution
      */
-    public static void SortArray(int[] A, int st, int end){
-        if (st == end){
-            return; // single element in a array
-        }
-        int mid = (st + end)/2;
-        SortArray(A, st, mid);
-        SortArray(A, mid+1, end);
-        MergeArray(A, st, mid, end); // 2 pointer approach
+    int res = 0;
+    public  int SortArray(int[] array, int st, int end){
 
+        if (array.length <= 1) {
+            return 0;
+        }
+        int mid = array.length / 2;
+        int[] left = Arrays.copyOfRange(array, 0, mid);
+        int[] right = Arrays.copyOfRange(array, mid, array.length);
+        SortArray(left, 0, mid);
+        SortArray(right, mid+1, end);
+        res = res + merge(array, left, right);
+        return res;
     }
 
-    /**
-     *
-     * @param B
-     * @param st
-     * @param mid
-     * @param end
-     * @return
-     */
-
-    public static int[] MergeArray(int[] B, int st, int mid, int  end) {
-        // merge the sorted array into one
-        // assumption, I/P -> B[N], C[M] --> A[N+M]
-        int i = st; //B
-        int j = mid; //C
-        int N = mid+end;
-        int temp = 0;
-        for (int k = 0; k< (N); k++) {
-            if (i == mid) { //end of the array B
-            } else if (j == N){ // end of the array C
-            } else if (B[i]<B[j]){
-                //temp = B[i]; // take smaller number
+    private static int merge(int[] array, int[] left, int[] right) {
+        int i = 0, j = 0, k = 0;
+        int inc = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                array[k++] = left[i++];
             } else {
-                //A[k]  = B[j++];
+                array[k++] = right[j++];
+                inc = inc + (left.length -i);
             }
         }
-        return B;
+        while (i < left.length) {
+            array[k++] = left[i++];
+        }
+        while (j < right.length) {
+            array[k++] = right[j++];
+            inc = inc + (left.length -i);
+
+        }
+        return inc;
     }
 
     /**
@@ -128,13 +128,34 @@ public class day_40_advDSA_SelectionMergeSort {
         //System.out.println(+res);
         return res;
     }
+
+    /**
+     * Given an array of integers A. If i < j and A[i] > A[j], then the pair (i, j) is called an inversion of A.
+     * Find the total number of inversions of A modulo (109 + 7).
+     * A = [3, 4, 1, 2]
+     * Output: 4
+     * The pair (0, 2) is an inversion as 0 < 2 and A[0] > A[2]
+     * The pair (0, 3) is an inversion as 0 < 3 and A[0] > A[3]
+     * The pair (1, 2) is an inversion as 1 < 2 and A[1] > A[2]
+     * The pair (1, 3) is an inversion as 1 < 3 and A[1] > A[3]
+     * @param args
+     * Idea1: Brute force O(N^2)
+     * Idea2: Merge sort (divide and conquer)
+     *
+     */
+    public static int getInversionPairCount(int[] A) {
+        int res = 0;
+
+        return res;
+    }
     public static void main(String[] args) {
         int[] A = {3, 9, 15, 19};
         int[] B = {2, 4, 10};
         //int[] C = SortEvenAndOddSortedArray(A, B);
-        int[] D = { 3, 2, 9, 4};
-        //SortArray(D, 0, D.length);
-        int [] E = { 8, 16, 80, 55, 32, 8, 38, 40, 65, 18, 15, 45, 50, 38, 54, 52, 23, 74, 81, 42, 28, 16, 66, 35, 91, 36, 44, 9, 85, 58, 59, 49, 75, 20, 87, 60, 17, 11, 39, 62, 20, 17, 46, 26, 81, 92 };
-        kthsmallest(E, 9);
+        int[] D = { 45, 10, 15, 25, 50 };
+        day_40_advDSA_SelectionMergeSort obj = new day_40_advDSA_SelectionMergeSort();
+        System.out.println(obj.SortArray(D, 0, D.length));
+        //int [] E = { 8, 16, 80, 55, 32, 8, 38, 40, 65, 18, 15, 45, 50, 38, 54, 52, 23, 74, 81, 42, 28, 16, 66, 35, 91, 36, 44, 9, 85, 58, 59, 49, 75, 20, 87, 60, 17, 11, 39, 62, 20, 17, 46, 26, 81, 92 };
+        //kthsmallest(E, 9);
     }
 }
