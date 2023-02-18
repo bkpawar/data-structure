@@ -95,7 +95,6 @@ public class day45_advDSA_BinarySearch2 {
      * <p>Input: 11 output 3, Input: 9 output; 3</p>
      * When A = 11 , square root of A = 3.316. It is not a perfect square so we return the floor which is 3.
      * When A = 9 which is a perfect square of 3, so we return 3.
-     * @param args
      */
     public static int sqrt(int N){
         int l = 1, r = N;

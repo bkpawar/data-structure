@@ -12,7 +12,7 @@ public class day_46_advDSA_BinarySearch3 {
     public int painterProblem(int X, int T, int[] A) {
         int cnt = 1, time = X;
         for (int i = 0; i < A.length-1; i++) {
-            if ((A[i] * T) > X)) // painting one board itself takes more time
+            if ((A[i] * T) > X) // painting one board itself takes more time
                 return -1;
             if (A[i] * T <= X) {
                 //assign to current painter
@@ -31,6 +31,11 @@ public class day_46_advDSA_BinarySearch3 {
     public int getMinimumTimeofPainting(int X, int P, int[]A){
         // binary search
         //1> define search space
+        return -1;
+
+    }
+
+    public static void main(String[] args) {
 
     }
 }
