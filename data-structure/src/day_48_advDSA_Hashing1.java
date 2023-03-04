@@ -167,7 +167,58 @@ public class day_48_advDSA_Hashing1 {
      * @param B Second argument B is a 2D array of integers describing the queries.
      * @return Return an array of integers denoting the answers to each query of type 2.
      */
-    public static ArrayList<Integer> flipAndfindNearest(String A, ArrayList<ArrayList<Integer>> B) {
+    public static int[] flipAndfindNearest(String A, int[][] B) {
+        char[] C = A.toCharArray();
+        int k = 0, index = -1;
+        int p1 = -1, p2 = -1;
+        int n = B.length;
+        int[] result = new int[n];
+
+        for(int j = 0; j<n; j++) {
+            if (B[j][0] == 1) {
+                // first query, flipt the Xth bit
+                int l = B[j][1]-1;
+                C[l] = (char)((int)((C[l] - '0')^1)+ '0'); // toggle the bit
+            } else {
+                p2 = p1 = B[j][1]-1; // second query; two ponter approach
+                index = findNearestOne(C, p1, p2);
+                result[k++] = index;
+            }
+        }
+        int count=0;
+        for(int i=0;i<result.length;i++){
+            if(result[i]!=0)
+                count++;
+        }
+        int[] res = new int[count]; int l=0;
+        for(int i=0;i<result.length;i++){
+            if(result[i]!=0)
+                res[l++] = result[i];
+        }
+        return res;
+    }
+    static int findNearestOne(char[] C,int p1,int p2){
+        int li=-1,ri=-1,iniVal = p1;
+
+        while(p1>=0 || p2<C.length){
+            if(p1>=0) {
+                if(C[p1] != '1'){
+                    p1--;
+                }else{
+                    li=p1;
+                    return li+1;
+                }
+            }
+            if(p2<C.length) {
+                if(C[p2] != '1'){
+                    p2++;
+                }else{
+                    ri=p2;
+                    return ri+1;
+                }
+            }
+        }
+        return -1;
 
     }
     public static void main(String[] args) {

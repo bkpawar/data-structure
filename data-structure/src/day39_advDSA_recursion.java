@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Stack;
+//import org.apache.commons.lang3.StringUtils;
 /**
  * Recursion: a function call itself.
  * It helps to solve a problem by solving some sub-problems.
@@ -126,10 +129,59 @@ public class day39_advDSA_recursion {
         towerOfhanoi(N-1, Bh, Cd, As);
 
     }
+
+    /**
+     * Problem:  Generate all Parentheses II
+     * <p>
+     *     Given an integer A pairs of parentheses, write a function to generate all combinations of well-formed parentheses of length 2*A.
+     *
+     * </p>
+     * @param A First and only argument is integer A.
+     * @return Return a sorted list of all possible parenthesis.
+     *<p>
+     *     A = 3
+     *     [ "((()))", "(()())", "(())()", "()(())", "()()()" ]
+     *</p>
+     */
+    ArrayList<String> generateParenthesisAns = new ArrayList<>();
+    public  ArrayList<String> generateParenthesis(int A) {
+        recursionMethod("", 0, 0, A);
+        return generateParenthesisAns;
+    }
+    private String removeLastChar(String s)
+    {
+        //returns the string after removing the last character
+        if (s.length() > 0)
+            return s.substring(0, s.length() - 1);
+        else
+            return null;
+    }
+    void recursionMethod(String curr, int openBr, int closeBr, int A){
+        if ((openBr == A) && (closeBr == A)){
+            generateParenthesisAns.add(curr);
+            return; // found the seq
+        }
+        if (openBr == A) {
+            recursionMethod(curr+")", openBr, closeBr+1, A);
+            return;
+        }
+        if (openBr == closeBr) {
+            //first element
+            recursionMethod(curr+"(", openBr+1, closeBr, A);
+        }
+
+        if (openBr > closeBr ) {
+            recursionMethod(curr+"(", openBr+1, closeBr, A);
+            recursionMethod(curr+")", openBr, closeBr+1, A);
+        }
+        return;
+    }
     public static void main(String[] args) {
         //System.out.println("sum of natural no:"+getSumOfNaturalNo(5));
         //System.out.println("Febonacci series sum:"+getFibonaccciSeries(4));
         //simpleOrderPrint(3);
-        reverseOrderPrint(3);
+        //reverseOrderPrint(3);
+        day39_advDSA_recursion obj = new day39_advDSA_recursion();
+        System.out.println(obj.generateParenthesis(2));
     }
 }
