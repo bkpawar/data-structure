@@ -19,6 +19,13 @@ public class day74_advDSA4_Greedy {
     /**
      * Q2. Permutations:
      * Given an integer array A of size N denoting collection of numbers , return all possible permutations.
+     * The array might contain duplicates.
+     * @param args
+     */
+
+    /**
+     * Q2. Permutations:
+     * Given an integer array A of size N denoting collection of numbers , return all possible permutations.
      * @param args
      */
     public static void backtrack(int[]A, List<Integer> tempList, List<List<Integer>> result) {
