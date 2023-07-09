@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Scanner;
 
 /**
 Given an array of integers A, find and return whether the given array contains a non-empty subarray with a sum equal to 0.
@@ -47,7 +48,8 @@ public class SubArrayEqualToZero {
         A[1] = -1;
         //A[2] = 0;
         //A[3] = -3;
-       // Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
+       int a = sc.nextInt();
         //sc.
         int c = solve(A);
         System.out.println(c);

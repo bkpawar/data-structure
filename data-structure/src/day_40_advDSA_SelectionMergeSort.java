@@ -21,8 +21,22 @@ public class day_40_advDSA_SelectionMergeSort {
      * @param A
      * Tc: O(N^2), Sc: O(1)
      */
-    public void SelectionSort(int[] A){
-
+    static <b> void swap(int i, int j, int[]A) {
+        int c = A[i];
+        A[i] = A[j];
+        A[j] = c;
+    }
+    public void SelectionSort(int[] A) {
+        int maxId = 0;
+        for (int i = A.length - 1; i >= 1; i--) {
+            maxId = 0;
+            for (int j = 1; j <= i; j++) {
+                if (A[j] > A[maxId]) {
+                    maxId = j;
+                }
+            }
+            swap(i, maxId, A);
+        }
     }
     /**
      * Q> given an integer array where all odd elements are sorted
@@ -36,7 +50,7 @@ public class day_40_advDSA_SelectionMergeSort {
      * This is base idea behind merge sort. Merging two sorted array.
      * Merge sort -> Divide and Conquer
      */
-    public static int[] SortEvenAndOddSortedArray(int[] B, int[] C){
+     public int[] SortEvenAndOddSortedArray(int[] B, int[] C){
         // merge the sorted array into one
         // assumption, I/P -> B[N], C[M] --> A[N+M]
         int i = 0; //B
@@ -149,6 +163,11 @@ public class day_40_advDSA_SelectionMergeSort {
         return res;
     }
     public static void main(String[] args) {
+        int[]uA = {5, 8, 1, 15, 7};
+        day_40_advDSA_SelectionMergeSort obj = new day_40_advDSA_SelectionMergeSort();
+        obj.SelectionSort(uA);
+        System.out.println(uA);
+        /*
         int[] A = {3, 9, 15, 19};
         int[] B = {2, 4, 10};
         //int[] C = SortEvenAndOddSortedArray(A, B);
@@ -157,5 +176,6 @@ public class day_40_advDSA_SelectionMergeSort {
         System.out.println(obj.SortArray(D, 0, D.length));
         //int [] E = { 8, 16, 80, 55, 32, 8, 38, 40, 65, 18, 15, 45, 50, 38, 54, 52, 23, 74, 81, 42, 28, 16, 66, 35, 91, 36, 44, 9, 85, 58, 59, 49, 75, 20, 87, 60, 17, 11, 39, 62, 20, 17, 46, 26, 81, 92 };
         //kthsmallest(E, 9);
+         */
     }
 }
