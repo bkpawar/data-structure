@@ -119,7 +119,7 @@ public class day87_advDSA7_Graph1 {
         return 0;  // No cycle detected
     }
 
-    private boolean isCycleExist(List<List<Integer>> graph, int startNode) {
+    static boolean isCycleExist(List<List<Integer>> graph, int startNode) {
         Queue<Integer> queue = new LinkedList<>();
         boolean[] visited = new boolean[graph.size()];
 
