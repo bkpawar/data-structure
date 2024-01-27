@@ -18,7 +18,7 @@ public class day_57_advDSA_Stacks2 {
      * index 4: A[3] is nearest element which is less than A[5], G[5] = A[3]
      * </p>
      */
-    static public int[] prevSmaller(int[] A) {
+    public static int[] prevSmaller(int[] A) {
         Stack<Integer>myStack = new Stack<>();
         int[] ans = new int[A.length];
         for (int i = 0; i < A.length; i++){
@@ -34,7 +34,7 @@ public class day_57_advDSA_Stacks2 {
         }
         return ans;
     }
-    public int[] nextSmaller(int[] A) {
+    public static int[] nextSmaller(int[] A) {
         int[]res = new int[A.length];
         int n = A.length;
         Stack<Integer>st = new Stack<>();
